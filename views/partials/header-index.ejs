@@ -1,0 +1,77 @@
+
+<header id="header" class="flex">
+
+  <div id="frase-tienda" class="bg-crema text-center tx-crema-b w-100 tx-12 ">
+    <p class="margin-0">🌱 Anatomía de nuestros cuerpos - Alternativas para la salud 🌱</p>
+  </div>
+
+
+  <nav id="main-nav" >
+    <div id="header-shadow" class="w-100 flex pt-24">
+
+      <!--SIDE NAVBAR-->
+      <div class="flex justify-between align-center w-100 padding-8-48">
+
+        <div class="w-20">
+        <div id="cruz" class="container myFunction" onclick="openNav(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        </div>
+        <div id="mySidenav" class="sidenav ">
+  
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav(this)">&times;</a>
+          <a href="../products">🛍️ Productos</a>
+          <a href="../fitoterapia">🌱 Fitoterapia</a>
+          <a href="../filosofia">💚 Filosofía Hampi</a>
+          <a href="../contacto">📞 Contacto</a>
+  
+          <% if (locals.isLogged) { %>
+            <a  href="/user/userProfile">👤 Mi perfil</a>
+            <a  href="/user/logout">👋🏻 Cerrar sesión</a>
+          <% } %>
+  
+        </div>
+
+    <!--LOGO HAMPI-->
+    <a href="/" class="w-60 ms-auto-margin text-center">
+      <img class="logo-hy" src="/images/logo1.png" alt="Logo Hampi Yura" />
+    </a>
+
+    <!--LOGIN LOGIN-->
+    <div class="w-20 py-24 ">
+        
+      <!-- si tengo locals.isLogged = false (porque asi esta en el MD), quiero mostrar la parte del "else" -->
+      <!-- porque esta seteado en "false" -->
+        <% if (locals.isLogged) { %>
+        <li class="">
+        <a class="tx-blanco" href="/user/userProfile" id="dropUser">
+          ¡Hola, <%= locals.userLogged.fullName %>!
+        </a>
+              
+        <% } else { %>
+        <li class="text-right">
+        <a href="/user/login">
+          <i class="far fa-user-circle"></i>
+        </a>
+        </li>
+
+        <% } %>
+      
+
+    
+        </div>
+
+
+
+
+
+  </div>
+
+
+    
+    </div>
+    </div>
+  </nav>
+</header>

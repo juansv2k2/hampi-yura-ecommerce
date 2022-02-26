@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head'); %>
+  <body class="body">
+    <%- include('partials/header'); %>
+
+    <!-- Container -->
+    <main id="" class="margin-top-16 margin-bottom-48">
+    
+      <div id="mi-cuenta">
+        <div >
+          
+            <a href="/user/logout" style="color: #848d7e;">Cerrar sesión</a>
+            
+            <h2 class="text-center">Mi cuenta</h2>
+            
+        </div>
+
+        <div  class="padding-24 justify-between text-center" style="border: 0.5px solid lightgray; max-width: 600px; margin: auto;">
+          <p>Hola, <%= user.fullName %></p>
+          <div class="  margin-auto"> 
+            <div class="avatar image-cropper margin-auto ">
+            <img src="/images/avatars/<%= user.avatar %> " width="50%" class="profile-pic" />
+            
+            </div>
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit"></i></a>
+            
+            <div class="flex justify-center margin-top-16 align-center ">
+            <p style="margin-right: 24px;"> <%= user.fullName %> </p>
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit"></i></a>
+            </div>
+
+            <div class="flex justify-center margin-top-16 align-center ">
+            <p style="margin-right: 24px;"> <%= user.email %> </p>
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit"></i></a>
+            </div>
+            
+            <div class="flex justify-center margin-top-16 align-center ">
+            <p style="margin-right: 24px;">  <%= user.birthdate %> </p>
+            <a href="/user/<%= user.id %>/edit"><i class="far fa-edit "></i></a>
+            </div>
+          
+            
+          
+
+          
+            
+            <div >
+              <a href="/user/<%= user.id %>/cart"><button class="boton-filo w-100 ">Mi carrito</button></a>
+            </div>
+             <div >
+              <a href="#"><button class="boton-filo w-100 ">Historial de compras</button></a>
+            </div>
+             <div >
+              <a href="#"><button class="boton-filo w-100 ">Métodos de pago</button></a>
+            </div>
+            <div >
+              <a href="#"><button class="boton-filo w-100 ">Mis direcciones</button></a>
+            </div>
+            <% if (locals.userLogged && userLogged.admin) { %>
+            <div >
+              <a href="/products/create"><button class="boton-filo w-100 ">Crear producto</button></a>
+            </div>
+            <% } %>
+          </div>    
+
+          
+          
+          
+        </div>
+    </div>
+    
+
+    </main>
+    <!-- //Container -->
+
+    <%- include ("./partials/footer.ejs") %>
+  </body>
+</html>

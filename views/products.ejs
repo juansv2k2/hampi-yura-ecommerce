@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Acá va el head-->
+    <%- include("partials/head.ejs") %>
+
+    <body class="body">
+        <!--Acá va el header-->
+        <%- include("partials/header.ejs") %>
+
+        <main id="main-content">
+            <!--Acá va el header-->
+            <!--<div class="container products-wrapper">-->
+                
+                    <div class="padding-24" >
+                        <h2 >Todos los productos</h2>
+                    </div>
+                    <div class="flex justify-between">
+                    <% for(let prod of products){ %> <%-
+                    include("partials/product.ejs", {prod:prod}) %> <% } %>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--Acá va el footer-->
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <%- include("partials/head") %>
+        <link rel="stylesheet" href="/css/carrito.css" />
+        <script defer src="/js/cart.js"></script>
+    </head>
+
+    <%- include("partials/header") %>
+    
+    <body class="background">
+        <main>
+            <div class="below-head-bar">
+
+                <h3 class="title">Carrito</h3>
+                <div class="cart-box-location">
+        
+                <div class="cart-box">
+                    <div>
+                        <div class="cart-flex m-2">
+                            <p class="title">Producto</p>
+                            <p class="title">Unidades</p>
+                            <p class="title">Precio</p>
+                        </div>
+                    
+                    <% if (e && cart ) { %> 
+                        <% for (let product of cart.products) { %> 
+                        <div class="cart-product-container">
+                            <div class="cart-flex color">
+                                <div class="cart-info">
+                                    <img src="../images/product-images/<%= product.image %> ">
+                                    <div>
+                                        <p><%= product.name %></p>
+                                        <form action="/carrito/borrar/<%= product.id %>?_method=DELETE" method="POST">
+                                            <button type="submit">Quitar</button></form>
+                                        <!-- <a href="/carrito/borrar/<%= product.id %>">Quitar</a> -->
+                                    </div>
+                                </div>
+                                <input id="stock" type="number" value="1">
+                                <p class="article-price"><%= product.price %> </p>
+                            </div>
+                        </div>
+                         
+                        <% } %> 
+                        <% } else { %> 
+                            No tenes productos en el carrito
+                            <% } %> 
+                     
+                        <section class="container-envio">
+                            <h2>Informacion de envio</h2>
+                            <!-- <!-- <div>Precio Parcial: 4000</div>
+                            <div>Envio: 500</div> -->
+                            <!-- <div>Precio Total:  -->
+                        </section>
+                        <div class="button-location">
+                            <form action="/carrito/comprar?_method=PUT" enctype="multipart/form-data" method="POST">
+                            <button class="button" type="submit" placeholder="Proceder a Pagar">
+                                Proceder a pagar
+                            </button>
+                        </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include ("partials/footer.ejs") %>
+    </body>
+  
+</html>

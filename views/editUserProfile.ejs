@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Acá va el head-->
+<%- include ("partials/head.ejs") %>
+
+	<body class="body">
+		<!--Acá va el header-->
+		<%- include ("partials/header.ejs") %>
+			<main id="main-content">
+				<section class="padding-24">
+					<div>
+						<form class="register-form" action="/user/userProfile?_method=PUT" method="POST" enctype="multipart/form-data">
+							<div>
+								<h2>Editá tus datos</h2>
+							</div>
+
+							<div class="form-input">
+								<label class="main-label" for="name"></label>
+								<input class="" id="name" type="text" name="fullName"
+									placeholder="Nombre y apellido"
+									value="<%=user.fullName%>"
+                />
+							</div>
+
+							<div class="form-input">
+								<label class="main-label" for="birthdate"></label>
+								<input class=" " id="birthdate" type="date" name="birthdate"
+									placeholder="Fecha de nacimiento"
+									value="<%= user.birthdate%>" />
+							</div>
+              
+							<div class="form-input">
+								<label class="main-label" for="email"></label>
+								<input class="" id="email" type="email" name="email"
+									placeholder="Dirección de email: persona@mail.com"
+									value="<%= user.email %>" />
+								
+							</div>
+							<div class="form-input">
+								<label class="main-label" for="avatar"></label>
+								<input class="" type="file" name="avatar" accept="image/*"
+									value="<%= user.avatar %>" />
+								
+							</div>
+							
+							
+							<div class="register-buttons w-100">
+								<button class="boton-filo bg-crema w-100" type="submit">ACEPTAR</button>
+							</div>
+							<div class="register-buttons w-100">
+								<button class="boton-filo bg-white w-100" type="back">CANCELAR</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+
+			<!--Acá va el footer-->
+			<%- include ("partials/footer.ejs") %>
+	</body>
+
+</html>

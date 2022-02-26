@@ -1,0 +1,121 @@
+/****media=min-width:768px - max-width: 1280px" *****/
+
+
+
+
+#img-header div {
+  position: absolute;
+  bottom: 40%;
+  font-size: 30px;
+  color: white;
+  left: 30px;
+  text-shadow: 2px 2px grey;
+}
+
+.ms-hide {
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.fa-user-circle:hover{
+    opacity: 1;
+    transform: rotate(360deg);
+    transition: transform ease-in-out 500ms
+}
+
+.img-medicina{
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.img-gift{
+  width: 50%;
+  height: 700px;
+  object-fit: cover;
+  transition: opacity .3s ease,transform 8s cubic-bezier(.25, .46, .45, .94);
+}
+
+#three-sections img:hover{
+  opacity: 0.8;
+
+}
+.img-gift:hover{
+  transform: scale(1.05);
+}
+
+#valores i:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.index-filo{
+  margin-bottom: 24px;
+}
+
+.content-medicine{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.content-gift{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  margin-left: 24px;
+  flex-direction: row-reverse;
+}
+
+.tx-medicine{
+  width: 50%;
+}
+
+
+.px-48{
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.py-24 {
+   padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.prod-detail{
+  width: 100%;
+  margin: auto;
+  padding: 24px;
+  align-items: center;
+}
+
+#añadir:hover {
+text-decoration: none;
+}
+
+#filo-index a:hover {
+  text-decoration: none;
+}

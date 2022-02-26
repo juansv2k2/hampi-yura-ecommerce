@@ -1,0 +1,198 @@
+/* colores de background */
+.bg-transparent{
+ background-color: transparent; 
+}
+
+.bg-blanco {
+  background-color: #f1e4d8;
+}
+
+.bg-crema{
+  background-color: #b3977f;;
+}
+.bg-crema-b{
+background-color: #f1e4d8
+}
+.bg-todo-oscuro {
+  background-color: #422613;
+}
+.bg-todo-medio {
+  background-color: #dd9859;
+}
+.bg-todo-claro {
+  background-color: #f2c59f;
+}
+
+.bg-cuidadopiel-claro {
+  background-color: #daa4a1;
+}
+
+.bg-cuidadopiel-oscuro {
+  background-color: #a67d7e;
+}
+
+.bg-medicina-oscuro {
+  background-color: #3d5f2b;
+}
+
+.bg-medicina-claro {
+  background-color: #477c34;
+}
+
+.bg-higiene-claro {
+  background-color: #84c3c3;
+}
+
+.bg-higiene-oscuro {
+  background-color: #0a4c4c;
+}
+
+.bg-verde-musgo {
+  background-color: #848d7e ;
+}
+
+.bg-opacity{
+  opacity: 30%;
+}
+
+.bg-img-filo{
+  background-image: url(/images/filo1.jpg);
+  background-size: cover
+}
+
+.bg-img-medicina{
+  background-image: url(/images/background/plantmedicine.jpg);
+  background-size: cover;
+  width: 100%;
+  
+}
+
+.bg-img-natural{
+  background-image: url(/images/background/bg-natural.png);
+  background-size: cover;
+}
+
+/* colores de texto */
+
+.tx-blanco {
+  color: whitesmoke;
+}
+
+.tx-negro {
+  color: black;
+}
+
+.tx-verde-musgo{
+  color: #848d7e;
+}
+.tx-todo-oscuro {
+  color: #422613;
+}
+.tx-todo-medio {
+  color: #dd9859;
+}
+.tx-todo-claro {
+  color: #f2c59f;
+}
+
+.tx-cuidadopiel-claro {
+  color: #daa4a1;
+}
+
+.tx-cuidadopiel-oscuro {
+  color: #a67d7e;
+}
+
+.tx-medicina-oscuro {
+  color: #3d5f2b;
+}
+
+.tx-medicina-claro {
+  color: #477c34;
+}
+
+.tx-higiene-claro {
+  color: #84c3c3;
+}
+
+.tx-higiene-oscuro {
+  color: #0a4c4c;
+}
+
+.tx-crema-b {
+  color: #f1e4d8;
+
+}
+
+
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+
+.border-button {
+  border: #84c3c3;
+}
+
+
+.br-bottom {
+  border-bottom: 1px solid lightgray;
+}
+
+h2 {
+  font-size: 28px; 
+}
+
+#dropUser {
+  font-style: italic;
+}
+
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-into-block{
+  display: block;
+}
+
+.interlineado-18{
+  line-height: 1.8
+}
+
+/*Font size*/
+.tx-12{
+  font-size: 12px;
+}
+
+.tx-14{
+  font-size: 14px;
+}
+
+.tx-20{
+  font-size: 20px;
+}
+
+.tx-28{
+  font-size: 28px;
+}
+
+.tx-34{
+  font-size: 34px;
+}
+

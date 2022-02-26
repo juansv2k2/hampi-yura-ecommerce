@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Acá va el head-->
+    <%- include ("partials/head.ejs") %>
+
+    <body>
+        <!--Acá va el header-->
+        <%- include ("partials/header.ejs") %>
+
+        <main id="main-content">
+            <section>
+                <article class=" flex padding-24 justify-between prod-cart-box align-center margin-bottom-16" style="max-height: 300px;" >
+                    <div class=" tx-medicine  text-center " style="max-height: 300px;" >
+                        <img src="/images/product-images/prod6.jpg" style="max-height: 250px;" width="auto" />
+                    </div>
+
+                    <div class="tx-medicine padding-24" style="max-height: 250px;">
+                        <div class="flex" style="max-height: 50px;">
+                        <p class="prod-cart w-50">Producto 1</p>
+                        <p class="price-cart w-50 text-right">$12.99</p>
+                        </div>
+                        <div class="flex align-center" style="max-height: 150px;">
+                        <p class="p-cart overflow-ellipsis prod-cart text-justify w-70" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, voluptatum sed cumque illum itaque minima inventore debitis quis magnam atque ratione velit aperiam odio enim autem ex dolores accusamus dicta?</p>
+                        <div class="w-30 text-right">
+                            <div class="w-100 margin-bottom-48">
+                        <select name="cant" type="text" id="" > 
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option> 
+                        </select>
+                        </div>
+                        <div class="w-100">
+                        <button class=""><i class="far fa-trash-alt"></i></button>
+                        </div>
+                        </div>
+                        
+                        </div>
+                        
+                    </div>
+                </article>
+
+                
+
+                <article class=" flex padding-24 justify-between prod-cart-box align-center margin-bottom-16" style="max-height: 300px;" >
+                <div class="flex w-100">
+                <p class="w-50">Precio total: </p>
+                <p class="w-50 text-right">$ xxx</p>
+                </div>
+                </article>
+
+                
+                <form action="/productCart" method="POST">
+                    <label for="nota"></label>
+                    <textarea name="nota" id="nota" placeholder="Añade una dedicatoria o nota para que nuestro equipo lo tenga en cuenta al momento de preparar tu pedido."></textarea>
+                </form>
+                <button class="boton-finalizar">FINALIZAR COMPRA</button>
+            </section>
+        </main>
+        <!--Acá va el footer-->
+        <%- include ("partials/footer.ejs") %>
+    </body>
+</html>

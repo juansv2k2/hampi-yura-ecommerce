@@ -1,0 +1,87 @@
+[
+    {
+        "id": 2,
+        "name": "Shampoo sólido - cabello seco",
+        "price": 600,
+        "description": "Sahmpoo sólido para cabello seco",
+        "category": "Higiene",
+        "image": "shampoo-seco.jpg",
+        "deleted": true
+    },
+    {
+        "id": 4,
+        "name": "Pasta dental",
+        "price": 300,
+        "description": "Pasta dental para que tengas lo mejores dientes",
+        "category": "Higiene",
+        "image": "pasta-dental.png",
+        "deleted": true
+    },
+    {
+        "id": 7,
+        "name": "Protector solar facial",
+        "price": 1000,
+        "description": "Cuidá tu cara con este increíble protector",
+        "image": "pasta-dental.png",
+        "deleted": false,
+        "discount": null,
+        "category": "Belleza"
+    },
+    {
+        "id": 8,
+        "name": "Crema humectante - día",
+        "price": 900,
+        "description": "Crema humectante para el día",
+        "category": "Belleza",
+        "image": "crema-humectante-dia.png",
+        "deleted": false
+    },
+    {
+        "id": 9,
+        "name": "Crema humectante - noche",
+        "price": 900,
+        "description": "Crema humectante para la noche",
+        "category": "Belleza",
+        "image": "pasta-dental.png",
+        "deleted": false
+    },
+    {
+        "id": 10,
+        "name": "Cannabis microdosis",
+        "price": 1500,
+        "description": "Tintura madre",
+        "category": "Higiene",
+        "image": "cannabis.png",
+        "deleted": false,
+        "discount": null
+    },
+    {
+        "name": "Prueba",
+        "price": 13,
+        "description": "una prueba agregando productMulterMiddleware",
+        "category": "Belleza",
+        "id": 11,
+        "image": "1634554715439_img.jpg",
+        "deleted": true
+    },
+    {
+        "name": "Una prueba mas",
+        "price": 2,
+        "description": "blablabla",
+        "stock": "1",
+        "category": "Belleza",
+        "id": 12,
+        "image": "1636558326804_img.jpg",
+        "deleted": false
+    },
+    {
+        "name": "prueba",
+        "price": 23,
+        "description": "una prueba con cambio en servicios",
+        "stock": "3",
+        "category": "Fitoterapia",
+        "id": 13,
+        "image": "1636758149850_img.jpg",
+        "deleted": false
+    }
+]

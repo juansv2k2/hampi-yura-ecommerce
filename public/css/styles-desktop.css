@@ -1,0 +1,23 @@
+/****media=min-width:1280px + *****/
+
+.box {
+  width: auto;
+}
+
+#img-detail {
+  max-width: 550px;
+  height: 550px;
+}
+
+.prod-detail{
+  align-items: flex-start;
+}
+
+#img-header div {
+  position: absolute;
+  bottom: 40%;
+  font-size: 36px;
+  color: white;
+  left: 30px;
+  text-shadow: 2px 2px grey;
+}

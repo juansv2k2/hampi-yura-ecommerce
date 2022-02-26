@@ -1,0 +1,97 @@
+/* forms */
+
+.register-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 400px;
+  margin:auto;
+  /*background-color: #0a4c4cb6;
+  border-radius: 8px;*/
+}
+
+
+
+.main-label {
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+
+.form-input {
+  width: 100%;
+  /*text-align: center;*/
+}
+
+.form-input .main-label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.form-input input {
+  width: 100%;
+  padding: 10px;
+  border: solid rgb(77, 68, 68) 1px;
+}
+
+.form-input input[type="checkbox"],
+.form-input input[type="radio"] {
+  width: auto;
+  
+}
+
+.required-message {
+  margin-top: 0;
+  color: red;
+  font-size: 8px;
+  text-align: center;
+}
+
+.register-he_leido {
+  text-align: justify;
+  width: 100%;
+  margin: auto;
+  padding: 10px 0;
+  line-height: 1.8;
+}
+
+.register-buttons {  
+  width: 70%;
+}
+
+.boton-form {
+  width: 100%;
+  font-size: 14px;
+  color: white;
+  background-color: #84c3c3;
+  display: block;
+  padding: 10px;  
+  text-align: center;
+  margin: 16px auto;
+  border: #84c3c3;
+}
+
+.boton-form:hover {
+  background-color: transparent;
+  border: 0.5px solid #84c3c3;
+  color: #84c3c3;
+}
+
+#userLoginForm input {
+  border: 0.5px solid lightgray;
+  height: 52px;
+}
+
+#userRegisterForm input {
+  border: 0.5px solid lightgray;
+  height: 52px;
+}
+
+#birthdate {
+  background-color: transparent;
+}

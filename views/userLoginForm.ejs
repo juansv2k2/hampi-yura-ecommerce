@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script
+        defer
+        src="/js/userLoginValidator.js"
+        type="text/javascript"
+    ></script>
+    <!--Acá va el head-->
+    <%- include ("./partials/head.ejs") %>
+
+    <body class="body">
+        <!--Acá va el header-->
+        <%- include ("./partials/header.ejs") %>
+
+        <main id="main-content">
+            <section class="padding-24">
+                <div>
+                    <form
+                        class="register-form"
+                        action="/user/login"
+                        method="POST"
+                        id="userLoginForm"
+                    >
+                        <div class="text-center">
+                            <h2>Iniciar sesión</h2>
+                            <p>Introducí tu correo electrónico y contraseña:</p>
+                        </div>
+                        <ul id="errores" class="hidden"></ul>
+                        <div class="form-input">
+                            <label class="main-label" for="email"></label>
+                            <input
+                                class="border-radius"
+                                id="email"
+                                type="email"
+                                name="email"
+                                placeholder="Dirección de correo electrónico"
+                            />
+
+                            <% if (locals.errors && errors.email) { %>
+                            <div><%= errors.email.msg %></div>
+                            <% } %>
+                        </div>
+
+                        <div class="form-input">
+                            <label class="main-label" for="password"></label>
+                            <input
+                                class="border-radius"
+                                id="password"
+                                type="password"
+                                name="password"
+                                placeholder="Contraseña"
+                            />
+
+                            <% if (locals.errors && errors.password) { %>
+                            <div><%= errors.password.msg %></div>
+                            <% } %>
+                        </div>
+                        <div class="form-input w-100 flex align-center margin-top-16">
+                            <input type="checkbox" class="w-10" name="remember_user" />
+                            <small class="w-90 register-he_leido tx-negro text-justify">
+                                
+                                Recordame
+                            </small>
+                        </div>
+                        <div class="w-100">
+                            <button class="boton-form" type="submit">
+                                Ingresar
+                            </button>
+                        </div>
+                        <div>
+                            <p>
+                                ¿Todavía no tenés una cuenta?
+                                <a href="/user/register">Crearte una</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--Acá va el footer-->
+        <%- include ("./partials/footer.ejs") %>
+    </body>
+</html>

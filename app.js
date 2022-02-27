@@ -1,5 +1,13 @@
 // Global imports
 
+const { Pool } = require("pg");
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false,
+    },
+});
+
 const express = require("express");
 const session = require("express-session");
 const cookies = require("cookie-parser");

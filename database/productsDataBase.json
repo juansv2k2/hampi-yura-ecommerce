@@ -1,5 +1,14 @@
 [
     {
+        "id": 1,
+        "name": "Shampoo sólido - cabello graso",
+        "price": 1200,
+        "description": "Sahmpoo sólido para cabello graso",
+        "image": "shampoo-graso.jpg",
+        "deleted": false,
+        "discount": null
+    },
+    {
         "id": 2,
         "name": "Shampoo sólido - cabello seco",
         "price": 600,
@@ -7,6 +16,15 @@
         "category": "Higiene",
         "image": "shampoo-seco.jpg",
         "deleted": true
+    },
+    {
+        "id": 3,
+        "name": "Shampoo sólido - cabello con rulos",
+        "price": 600,
+        "description": "Sahmpoo sólido para cabello con rulos",
+        "image": "shampoo-rulos.jpg",
+        "deleted": true,
+        "discount": null
     },
     {
         "id": 4,
@@ -18,14 +36,22 @@
         "deleted": true
     },
     {
+        "id": 6,
+        "name": "Crema post solar",
+        "price": 120,
+        "description": "Crema post solar",
+        "image": "pasta-dental.png",
+        "discount": null,
+        "deleted": true
+    },
+    {
         "id": 7,
-        "name": "Protector solar facial",
+        "name": "Protectos solar facial",
         "price": 1000,
         "description": "Cuidá tu cara con este increíble protector",
+        "category": "Belleza",
         "image": "pasta-dental.png",
-        "deleted": false,
-        "discount": null,
-        "category": "Belleza"
+        "deleted": false
     },
     {
         "id": 8,
@@ -50,38 +76,17 @@
         "name": "Cannabis microdosis",
         "price": 1500,
         "description": "Tintura madre",
-        "category": "Higiene",
+        "category": "Medicina",
         "image": "cannabis.png",
-        "deleted": false,
-        "discount": null
+        "deleted": false
     },
     {
         "name": "Prueba",
         "price": 13,
         "description": "una prueba agregando productMulterMiddleware",
-        "category": "Belleza",
+        "category": "cat1",
         "id": 11,
         "image": "1634554715439_img.jpg",
         "deleted": true
-    },
-    {
-        "name": "Una prueba mas",
-        "price": 2,
-        "description": "blablabla",
-        "stock": "1",
-        "category": "Belleza",
-        "id": 12,
-        "image": "1636558326804_img.jpg",
-        "deleted": false
-    },
-    {
-        "name": "prueba",
-        "price": 23,
-        "description": "una prueba con cambio en servicios",
-        "stock": "3",
-        "category": "Fitoterapia",
-        "id": 13,
-        "image": "1636758149850_img.jpg",
-        "deleted": false
     }
 ]

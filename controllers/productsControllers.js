@@ -1,30 +1,23 @@
-const { validationResult, body } = require("express-validator");
-const { Product, Cart } = require("../database/models");
-/*const productService = require("../services/productService");*/
+const fs = require("fs");
+const path = require("path");
 
-const { Pool } = require("pg");
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false,
-    },
-});
+const productService = require("../services/productService");
 
 const controller = {
-    // Reed - Show all products
-    products: async (req, res) => {
-        const filteredProducts = await Product.findAll();
+    // Root - Show all products
+    products: (req, res) => {
+        const filteredProducts = productService.findAll();
         res.render("products", { products: filteredProducts });
     },
 
     // Detail - Detail from one product
-    productDetail: async (req, res) => {
-        const product = await Product.findByPk(req.params.id);
+    productDetail: (req, res) => {
+        const product = productService.findOneById(req.params.id);
         if (product) {
             res.render("productDetail", { product });
         } else {
             //error
-            res.redirect("/products");
+            res.send("Qué rompimo'?");
         }
     },
 
@@ -34,79 +27,31 @@ const controller = {
     },
 
     // Create -  Method to store
-    store: async (req, res) => {
-        const resultValidation = validationResult(req);
-
-        if (resultValidation.errors.length > 0) {
-            return res.render("productCreate", {
-                errors: resultValidation.mapped(),
-                oldData: req.body,
-            });
-        }
-
-        await Product.create({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: req.file.filename,
-            stock: req.body.stock,
-            category: req.body.category,
-            destacado: req.body.destacado,
-        });
+    store: (req, res) => {
+        productService.createOne(req.body, req.file);
         res.redirect("/products");
     },
 
     // Update - Form to edit
-    edit: async (req, res) => {
-        const product = await Product.findByPk(req.params.id);
+    edit: (req, res) => {
+        const product = productService.findOneById(req.params.id);
         res.render("productEdit", { product });
     },
     // Update - Method to update
-    update: async (req, res) => {
-        await Product.update(
-            {
-                name: req.body.name,
-                price: req.body.price,
-                description: req.body.description,
-                image: req.file ? req.file.filename : req.file,
-                stock: req.body.stock,
-                category: req.body.category,
-                destacado: req.body.destacado,
-            },
-            {
-                where: {
-                    id: req.params.id,
-                },
-            }
-        );
+    update: (req, res) => {
+        productService.editOne(req.params.id, req.body, req.file);
         res.redirect("/products");
     },
 
     // Delete - Delete one product from DB
-    destroy: async (req, res) => {
-        await Product.destroy({
-            where: {
-                id: req.params.id,
-            },
-        });
+    destroy: (req, res) => {
+        productService.destroyOne(req.params.id);
+
         res.redirect("/products");
     },
 
-    cart: (req, res) => {
-        res.render("Cart");
-    },
-
-    nuevaDB: async (req, res) => {
-        try {
-            const client = await pool.connect();
-            const result = await client.query("SELECT * FROM test_table");
-            const results = { results: result ? result.rows : null };
-            res.send("hola", results);
-            client.release();
-        } catch (err) {
-            console.error(err);
-            res.send("Error " + err);
-        }
+    productCart: (req, res) => {
+        res.render("products/productCart");
     },
 };
 

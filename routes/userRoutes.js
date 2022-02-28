@@ -3,7 +3,6 @@ const router = express.Router();
 
 // Controller
 const usersController = require("../controllers/userController");
-const cartController = require("../controllers/cartController");
 
 // Middlewares
 const uploadFile = require("../middlewares/userMulterMiddleware");
@@ -35,14 +34,9 @@ router.get("/logout", usersController.logout);
 router.get("/:id", authMiddleware, usersController.profile);
 
 // Edit - Perfil de Usuario
-router.get("/:id/edit", usersController.edit);
-router.put("/:id", uploadFile.single("avatar"), usersController.update);
-
 
 // Logout
 router.get("/logout", usersController.logout);
-
-
 
 /*Carrito
 router.get("/cart", usersController.cart);

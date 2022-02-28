@@ -4,7 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js"
+        "start": "nodemon -e js src/app.js"
     },
     "keywords": [],
     "author": "",
@@ -23,8 +23,6 @@
         "pg": "^8.7.3"
     },
     "devDependencies": {
-        "nodemon": "^2.0.13",
-        "sequelize": "^6.9.0",
-        "sequelize-cli": "^5.4.0"
+        "nodemon": "^2.0.13"
     }
 }

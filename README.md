@@ -1,5 +1,8 @@
 Hampi Yura - E-commerce Website for Medicinal Plants and Body Care
 
+![Homepage Preview](/public/images/localhost_3000_.png)
+_Preview of the Hampi Yura homepage_
+
 About
 Hampi Yura is an e-commerce platform focused on providing natural and organic medicinal plants and body care products. This application serves as a digital marketplace for those seeking authentic and natural treatments, inspired by ancient traditions and natural wisdom.
 
